@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo1.png">
+</head>
+
+<body>
+    <header>
+        <h1>EXPENSE TRACKER</h1>
+        <hr>
+    </header>
+    <div class="box">
+        <h2>ADD CATEGORY</h2>
+
+        <form id="categoryForm" onsubmit="return false;">
+            <label for="newCategory">Category:</label>
+            <input type="text" id="newCategory" placeholder="Enter new category">
+            <center><button type="button" onclick="addCategory()" id="b">Add Category</button></center>
+        </form>
+    </div>
+    <div class="box1">
+        
+            <h2>ADD EXPENSE</h2>
+            <form id="expenseForm" onsubmit="return false;">
+                <div style="text-align: center;">
+                <label for="category">Category:</label><br/>
+                <select id="category">
+                    <option value="" disabled selected>Select a category</option>
+                </select>
+
+                <label for="description">Description:</label><br/>
+                <input type="text" id="description" placeholder="Enter description"><br/>
+
+                <label for="amount">Amount:</label><br/>
+                <input type="number" id="amount" placeholder="Enter amount">
+
+                <button type="button" onclick="addExpense()">Add Expense</button>
+            </div>
+            </form>
+        
+    </div>
+    <div class="box3">
+        <h2>EXPENSE HISTORY</h2>
+        <table id="historyTable" border="">
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <div class="box4">
+        <h2>TOTAL EXPENSE</h2>
+        <h3 id="totalExpense">0</h3>
+    </div>
+    <div class="class-container">
+        <button onclick="calculateTotal()" class="submit">Submit</button>
+        <button onclick="resetAll()" class="reset">Reset</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
