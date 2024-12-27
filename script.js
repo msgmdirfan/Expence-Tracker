@@ -1,8 +1,6 @@
 
 const categories = [];
 let totalExpense = 0;
-
-
 function addCategory() {
     const categoryInput = document.getElementById("newCategory").value.trim();
 
