@@ -21,8 +21,10 @@ function addCategory() {
     option.value = categoryInput;
     option.textContent = categoryInput;
     categoryDropdown.appendChild(option);
+    option.style.fontSize="20px";
     document.getElementById("categoryForm").reset();
     alert("Category added successfully.");
+
 }
 
 function addExpense() {
@@ -49,7 +51,7 @@ function addExpense() {
 
 function calculateTotal() {
     document.getElementById("totalExpense").textContent = totalExpense;
-    alert(`Total Expense: ${totalExpense.toFixed(2)}`);
+    alert(`Total Expense: ${totalExpense}`);
 }
 
 

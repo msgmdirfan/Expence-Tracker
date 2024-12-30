@@ -46,7 +46,9 @@ header{
     cursor: pointer;
     
 }
-
+#opt{
+    font-size: 20px;
+}
 #categoryForm button:hover {
     background-color: darkviolet;
 }
